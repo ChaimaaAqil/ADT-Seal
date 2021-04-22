@@ -19,6 +19,14 @@ import java.util.stream.Collectors;
 
 public class ContainsPDFsOnlyValidator implements ConstraintValidator<ContainsPDFsOnly, MultipartFile[]> {
 
+    private Tika tika;
+    Predicate<InMemoryDocument> isNotPDF = document -> !tika.detect(document.getBytes()).equals(MimeType.PDF.getMimeTypeString());
+
+    ContainsPDFsOnlyValidator(Tika tika) {
+        this.tika = tika;
+    }
+
+// Verify if document is empty
     static Function<MultipartFile, InMemoryDocument> bytesToInMemoryDocument = document -> {
         try {
             if (document.getBytes().length == 0) throw new IOException("The file is empty or null");
@@ -28,12 +36,6 @@ public class ContainsPDFsOnlyValidator implements ConstraintValidator<ContainsPD
                     " field, the object is empty!", e);
         }
     };
-    private Tika tika;
-    Predicate<InMemoryDocument> isNotPDF = document -> !tika.detect(document.getBytes()).equals(MimeType.PDF.getMimeTypeString());
-
-    ContainsPDFsOnlyValidator(Tika tika) {
-        this.tika = tika;
-    }
 
     @Override
     public boolean isValid(MultipartFile[] value, ConstraintValidatorContext context) {

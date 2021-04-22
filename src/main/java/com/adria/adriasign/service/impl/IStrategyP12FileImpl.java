@@ -11,17 +11,18 @@ import java.security.KeyStore;
 
 @Service
 public class IStrategyP12FileImpl implements IStrategyP12File {
-    @Value("classpath:youssef_endentity.p12")
+    @Value("classpath:bsabir_endentity.p12")
+//    @Value("classpath:youssef_endentity.p12")
     Resource p12File;
 
     @Override
     public Pkcs12SignatureToken getPKCS12SignatureToken() {
         try {
             return new Pkcs12SignatureToken(p12File.getFile(),
-                    new KeyStore.PasswordProtection("test258".toCharArray()));
+                      new KeyStore.PasswordProtection("123456".toCharArray()));
+//                    new KeyStore.PasswordProtection("test258".toCharArray()));
         } catch (IOException e) {
 
-            //TODO handle : failed to decrypt safe contents entry throws exception java.security.UnrecoverableKeyException
             e.printStackTrace();
             return null;
         }

@@ -29,6 +29,7 @@ public class ReturnURL implements ReturnTypeStrategy {
                     String fileName = ApplicationUtils.generateUniquePath(inMemoryDocument);
                     try {
                         inMemoryDocument.save(envUtil.getUploadPath() + fileName);
+                     //   System.out.println(envUtil.getServerUrl() + envUtil.getFilesEndpoint() + fileName);
                         return envUtil.getServerUrl() + envUtil.getFilesEndpoint() + fileName;
                     } catch (IOException e) {
                         e.printStackTrace();

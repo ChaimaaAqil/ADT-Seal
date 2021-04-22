@@ -30,4 +30,5 @@ public class ClientDTO {
     @Email()
     private String email;
     private String businessId;
+    private String organisation;
 }
