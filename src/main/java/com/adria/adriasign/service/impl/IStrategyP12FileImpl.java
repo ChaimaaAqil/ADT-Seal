@@ -12,6 +12,7 @@ import java.security.KeyStore;
 @Service
 public class IStrategyP12FileImpl implements IStrategyP12File {
     @Value("classpath:bsabir_endentity.p12")
+
 //    @Value("classpath:youssef_endentity.p12")
     Resource p12File;
 

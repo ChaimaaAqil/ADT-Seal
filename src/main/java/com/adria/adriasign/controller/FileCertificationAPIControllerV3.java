@@ -6,18 +6,21 @@ import com.adria.adriasign.dto.request.DocumentSignatureParametersDTO;
 import com.adria.adriasign.service.ICertificationServiceV3;
 import com.adria.adriasign.service.ReturnTypeStrategyName;
 import com.adria.adriasign.service.impl.DocumentValidationService;
+import eu.europa.esig.dss.pades.SignatureImageTextParameters;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
+import javax.annotation.Resource;
 import javax.validation.Valid;
 
 @RestController
 @RequestMapping("${app.api.endpoint.v3}/documents/certification")
 @Validated
 public class FileCertificationAPIControllerV3 {
+// this is develop/inv branch
     final ICertificationServiceV3 certificationService;
     final DocumentValidationService documentValidationService;
 

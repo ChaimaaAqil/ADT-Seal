@@ -19,7 +19,9 @@ import eu.europa.esig.dss.pades.*;
 import eu.europa.esig.dss.pades.signature.PAdESService;
 import eu.europa.esig.dss.token.DSSPrivateKeyEntry;
 import eu.europa.esig.dss.token.Pkcs12SignatureToken;
+import org.apache.commons.lang3.SerializationUtils;
 import org.springframework.stereotype.Service;
+
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.annotation.Resource;
@@ -36,7 +38,9 @@ public class CertificationServiceImplV3 implements ICertificationServiceV3 {
     private final PAdESService service;
     private final ReturnTypeStrategyFactory strategyFactory;
     @Resource(name = "PAdESSBaseLineEnvelopedSHA256Params")
-    private PAdESSignatureParameters parameters;
+    private PAdESSignatureParameters baseParameters;
+    @Resource(name = "BaseTextParameters")
+    private SignatureImageTextParameters baseTextParameters;
 
     public CertificationServiceImplV3(IStrategyP12File p12FileStrategy, PAdESService pAdESService
             , ReturnTypeStrategyFactory strategyFactory) {
@@ -64,10 +68,12 @@ public class CertificationServiceImplV3 implements ICertificationServiceV3 {
         Pkcs12SignatureToken token = p12FileStrategy.getPKCS12SignatureToken();
         // extract the privateKey from the token
         DSSPrivateKeyEntry privateKey = token.getKeys().get(0);
-        parameters.setSigningCertificate(privateKey.getCertificate());
-        parameters.setCertificateChain(privateKey.getCertificateChain());
+        PAdESSignatureParameters invisibleSignatureParameters = SerializationUtils.clone(baseParameters);
 
-        return certifDocumentService(documentToBeCertified, token, privateKey, parameters);
+        invisibleSignatureParameters.setSigningCertificate(privateKey.getCertificate());
+        invisibleSignatureParameters.setCertificateChain(privateKey.getCertificateChain());
+
+        return certifDocumentService(documentToBeCertified, token, privateKey, invisibleSignatureParameters);
     }
 
     @Override
@@ -77,15 +83,16 @@ public class CertificationServiceImplV3 implements ICertificationServiceV3 {
         // extract the privateKey from the token
         DSSPrivateKeyEntry privateKey = token.getKeys().get(0);
         // create parameters for certificate the documents
-        parameters.setSigningCertificate(privateKey.getCertificate());
-        parameters.setCertificateChain(privateKey.getCertificateChain());
+        PAdESSignatureParameters visibleSignatureParameters = SerializationUtils.clone(baseParameters);
+        visibleSignatureParameters.setSigningCertificate(privateKey.getCertificate());
+        visibleSignatureParameters.setCertificateChain(privateKey.getCertificateChain());
         //initialize signature field parameters
         SignatureImageParameters imageParameters = createSignatureImageParameters(signatureImage, clientDTO, documentCertificateParametersDTO);
         // Adding the fieldParameters and imageParameters to the PAdESSignatureParameters
-        parameters.setImageParameters(imageParameters);
+        visibleSignatureParameters.setImageParameters(imageParameters);
         // sign and return the list of documents urls
 
-        return certifDocumentService(documentToBeCertified, token, privateKey, parameters);
+        return certifDocumentService(documentToBeCertified, token, privateKey, visibleSignatureParameters);
     }
 
     private InMemoryDocument certifDocumentService(MultipartFile document, Pkcs12SignatureToken token, DSSPrivateKeyEntry privateKey,
@@ -158,15 +165,10 @@ public class CertificationServiceImplV3 implements ICertificationServiceV3 {
         String businessIdText = businessId == null ? "" : String.format("%nBID:%s", businessId);
         String dateText = String.format("%n%tF %tT", date, date);
 
-        DSSFont font = new DSSJavaFont("monospaced", 8);
+        SignatureImageTextParameters customTextParameters = SerializationUtils.clone(baseTextParameters);
+        customTextParameters.setText(signatureText + businessIdText + dateText);
 
-        textParameters.setText(signatureText + businessIdText + dateText);
-        textParameters.setFont(font);
-        textParameters.setSignerTextPosition(SignerTextPosition.BOTTOM);
-        textParameters.setSignerTextHorizontalAlignment(SignerTextHorizontalAlignment.LEFT);
-        textParameters.setTextColor(Color.BLACK);
-
-        imageParameters.setTextParameters(textParameters);
+        imageParameters.setTextParameters(customTextParameters);
         imageParameters.setFieldParameters(fieldParameters);
 
         return imageParameters;
