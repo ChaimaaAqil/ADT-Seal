@@ -20,7 +20,6 @@ import javax.validation.Valid;
 @RequestMapping("${app.api.endpoint.v3}/documents/certification")
 @Validated
 public class FileCertificationAPIControllerV3 {
-// this is develop/inv branch
     final ICertificationServiceV3 certificationService;
     final DocumentValidationService documentValidationService;
 
