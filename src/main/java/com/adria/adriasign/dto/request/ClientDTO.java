@@ -1,17 +1,15 @@
 package com.adria.adriasign.dto.request;
 
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
-@Getter
-@Setter
+@Data
 @Valid
 @ToString
 @NotNull
+
 public class ClientDTO {
     @NotEmpty
     @Pattern(regexp = "^[a-zA-Z\\u00C0-\\u017F ]{3,255}$")

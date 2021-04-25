@@ -19,6 +19,7 @@ import eu.europa.esig.dss.pades.*;
 import eu.europa.esig.dss.pades.signature.PAdESService;
 import eu.europa.esig.dss.token.DSSPrivateKeyEntry;
 import eu.europa.esig.dss.token.Pkcs12SignatureToken;
+import lombok.RequiredArgsConstructor;
 import org.apache.commons.lang3.SerializationUtils;
 import org.springframework.stereotype.Service;
 
@@ -32,6 +33,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 @Service
+@RequiredArgsConstructor
 public class CertificationServiceImplV3 implements ICertificationServiceV3 {
 
     private final IStrategyP12File p12FileStrategy;
@@ -42,13 +44,7 @@ public class CertificationServiceImplV3 implements ICertificationServiceV3 {
     @Resource(name = "BaseTextParameters")
     private SignatureImageTextParameters baseTextParameters;
 
-    public CertificationServiceImplV3(IStrategyP12File p12FileStrategy, PAdESService pAdESService
-            , ReturnTypeStrategyFactory strategyFactory) {
-        this.p12FileStrategy = p12FileStrategy;
-        this.service = pAdESService;
-        this.strategyFactory = strategyFactory;
-    }
-
+// cette methode permet de vérifier si la signature est visible ou non et infecte chaque document a sa methode
     @Override
     public Object certifMultipleDocuments(DocumentDTO documentDTO, DocumentSignatureParametersDTO[] documentSignatureParameters, ClientDTO client, ReturnTypeStrategyName returnTypeStrategyName) {
         ReturnTypeStrategy strategy = this.strategyFactory.findStrategy(returnTypeStrategyName);
@@ -61,6 +57,7 @@ public class CertificationServiceImplV3 implements ICertificationServiceV3 {
                 .collect(Collectors.toList());
         return strategy.returnFile(inMemoryDocuments);
     }
+    // cette methode permet de faire la certifications invisible des documents on donnant dans ses parametes le doc à certifier
 
     @Override
     public InMemoryDocument certifInvisiblyADocument(MultipartFile documentToBeCertified) {
@@ -75,6 +72,7 @@ public class CertificationServiceImplV3 implements ICertificationServiceV3 {
 
         return certifDocumentService(documentToBeCertified, token, privateKey, invisibleSignatureParameters);
     }
+    // cette methode permet de faire la certifications visible des documents  on donnant dans ses parametes le document à certifier, l'image de signature, les parametres de documents a certifier , le client
 
     @Override
     public InMemoryDocument certifVisiblyADocument(MultipartFile documentToBeCertified, MultipartFile signatureImage, DocumentSignatureParametersDTO documentCertificateParametersDTO, ClientDTO clientDTO) {
@@ -94,19 +92,18 @@ public class CertificationServiceImplV3 implements ICertificationServiceV3 {
 
         return certifDocumentService(documentToBeCertified, token, privateKey, visibleSignatureParameters);
     }
-
+// cette methode permet de faire la certification , elle fait l'appel au service PADES de DSS
     private InMemoryDocument certifDocumentService(MultipartFile document, Pkcs12SignatureToken token, DSSPrivateKeyEntry privateKey,
                                                  PAdESSignatureParameters parameters) {
+        // permission de certification
+        parameters.setPermission(CertificationPermission.MINIMAL_CHANGES_PERMITTED);
         // Get the SignedInfo segment that need to be signed.
         try {
 
             DSSDocument toCertifDocument = new InMemoryDocument(document.getInputStream(), document.getOriginalFilename());
             ToBeSigned dataToSign = service.getDataToSign(toCertifDocument, parameters);
 
-
             DigestAlgorithm digestAlgorithm = parameters.getDigestAlgorithm();
-            // Add Permission Certification
-            parameters.setPermission(CertificationPermission.MINIMAL_CHANGES_PERMITTED);
 
 
             SignatureValue signatureValue = token.sign(dataToSign, digestAlgorithm, privateKey);
@@ -127,7 +124,7 @@ public class CertificationServiceImplV3 implements ICertificationServiceV3 {
         }
     }
 
-
+// cette methode permet de creer l'image de signature dans le documents visible à certifier
     private SignatureImageParameters createSignatureImageParameters(MultipartFile signatureImage, ClientDTO clientDTO, DocumentSignatureParametersDTO documentCertificateParametersDTO) {
         SignatureImageParameters imageParameters = new SignatureImageParameters();
         DSSDocument image;

@@ -10,6 +10,7 @@ import java.util.stream.Collectors;
 
 @Component
 public class ReturnBase64 implements ReturnTypeStrategy {
+
     @Override
     public Object returnFile(List<InMemoryDocument> signedDocument) {
 

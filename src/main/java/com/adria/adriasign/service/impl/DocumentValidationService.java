@@ -16,7 +16,9 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 @Service
+
 public class DocumentValidationService {
+    // Cette class permet de faire la validation des documents, et faire la verification sur le pdf et l'image
 
     /*
         * The number of documents should be equal to the number of documentsParameters(isVisible, X and Y positions).
