@@ -3,37 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="979ef62d-d1f1-481d-b60e-3c7773ddebe2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adria-sign.iml" beforeDir="false" afterPath="$PROJECT_DIR$/adria-sign.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/adria/adriasign/controller/FileCertificationAPIControllerV3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/adria/adriasign/controller/FileCertificationAPIControllerV3.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/adria/adriasign/controller/FileSignatureAPIControllerV2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/adria/adriasign/controller/FilesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/adria/adriasign/controller/FilesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/adria/adriasign/dto/request/ClientDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/adria/adriasign/dto/request/ClientDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/adria/adriasign/dto/request/DocumentDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/adria/adriasign/dto/request/DocumentDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/adria/adriasign/dto/request/DocumentSignatureParametersDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/adria/adriasign/dto/request/DocumentSignatureParametersDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/adria/adriasign/dto/response/EncodedDocumentResponseDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/adria/adriasign/dto/response/SignatureDocumentResponseDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/adria/adriasign/service/ISignatureServiceV2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/adria/adriasign/service/impl/CertificationServiceImplV3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/adria/adriasign/service/impl/CertificationServiceImplV3.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/adria/adriasign/service/impl/DocumentValidationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/adria/adriasign/service/impl/DocumentValidationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/adria/adriasign/service/impl/IStrategyP12FileImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/adria/adriasign/service/impl/IStrategyP12FileImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/adria/adriasign/service/impl/ReturnBase64.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/adria/adriasign/service/impl/ReturnBase64.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/adria/adriasign/service/impl/SignatureServiceImplV2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/adria/adriasign/util/ApplicationUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/adria/adriasign/util/ApplicationUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Folder_PDF_SIGNED/1619092600650.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Folder_PDF_SIGNED/1619092707419.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Folder_PDF_SIGNED/1619092741995.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Folder_PDF_SIGNED/1619092802270.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Folder_PDF_SIGNED/1619093772030.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Folder_PDF_SIGNED/1619094449075.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Folder_PDF_SIGNED/1619094466135.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Folder_PDF_SIGNED/1619094518351.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Folder_PDF_SIGNED/1619094539465.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Folder_PDF_SIGNED/1619094599575.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Folder_PDF_SIGNED/1619094836240.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Folder_PDF_SIGNED/1619097982395.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Folder_PDF_SIGNED/1619098018256.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/adria-sign.kotlin_module" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -48,42 +18,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/adria/adriasign/dto/request/DocumentDTO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="23" column="61" selection-start-line="23" selection-start-column="61" selection-end-line="23" selection-end-column="61" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/adria/adriasign/exception/FileNotValidException.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/adria/adriasign/exception/GenericException.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/adria/adriasign/exception/GlobalExceptionHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1377">
-              <caret line="99" column="56" selection-start-line="99" selection-start-column="56" selection-end-line="99" selection-end-column="56" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/adria/adriasign/exception/MultipartFileException.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -109,7 +43,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/adria/adriasign/dto/response/error/ApiError.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
+            <state relative-caret-position="289">
               <caret line="29" column="40" selection-start-line="29" selection-start-column="40" selection-end-line="29" selection-end-column="40" />
             </state>
           </provider>
@@ -124,11 +58,50 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/adria/adriasign/dto/response/error/ApiValidationError.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="136">
               <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/adria/adriasign/controller/FileCertificationAPIControllerV3.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="35" column="37" selection-start-line="35" selection-start-column="37" selection-end-line="35" selection-end-column="37" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/adria/adriasign/service/impl/DocumentValidationService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1615">
+              <caret line="107" column="29" selection-start-line="107" selection-start-column="29" selection-end-line="107" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/adria/adriasign/service/ReturnTypeStrategy.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="50" selection-start-line="10" selection-start-column="50" selection-end-line="10" selection-end-column="50" />
             </state>
           </provider>
         </entry>
@@ -366,7 +339,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="950" />
     <option name="y" value="-10" />
     <option name="width" value="980" />
@@ -381,6 +354,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -619,7 +593,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -681,17 +654,23 @@
       <workItem from="1619098480748" duration="2861000" />
       <workItem from="1619171005322" duration="5780000" />
       <workItem from="1619179670670" duration="2218000" />
+      <workItem from="1619314499289" duration="2441000" />
+      <workItem from="1619431393290" duration="1935000" />
+      <workItem from="1619518784907" duration="1021000" />
+      <workItem from="1619520663478" duration="611000" />
+      <workItem from="1619523356721" duration="593000" />
+      <workItem from="1619618637176" duration="1021000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32435000" />
+    <option name="totallyTimeSpent" value="40057000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.33176944" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3505362" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -701,7 +680,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.29844412" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.20933522" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -858,38 +837,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/adria/adriasign/controller/FileSignatureAPIControllerV2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="58" column="37" selection-start-line="58" selection-start-column="37" selection-end-line="58" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="50" lean-forward="true" selection-start-line="10" selection-start-column="50" selection-end-line="10" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/adria/adriasign/service/impl/SignatureServiceImplV2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="59" column="54" lean-forward="true" selection-start-line="59" selection-start-column="54" selection-end-line="59" selection-end-column="54" />
-          <folding>
-            <element signature="method#signDocumentService#0;class#SignatureServiceImplV2#0" />
-            <element signature="method#createSignatureImageParameters#0;class#SignatureServiceImplV2#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/adria/adriasign/service/ISignatureServiceV2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/adria/adriasign/controller/FileSignatureAPIControllerV2.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/adria/adriasign/service/impl/SignatureServiceImplV2.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/adria/adriasign/service/ISignatureServiceV2.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/adria/adriasign/AdtSealApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -925,24 +875,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/adria/adriasign/service/ReturnTypeStrategy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/adria/adriasign/service/impl/CertificationServiceImplV3.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-470">
           <caret line="126" column="91" selection-start-line="126" selection-start-column="91" selection-end-line="126" selection-end-column="91" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/adria/adriasign/service/impl/DocumentValidationService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-680">
-          <caret line="20" column="110" selection-start-line="20" selection-start-column="110" selection-end-line="20" selection-end-column="110" />
         </state>
       </provider>
     </entry>
@@ -974,16 +910,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/adria/adriasign/controller/FileCertificationAPIControllerV3.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="21" selection-start-line="21" selection-end-line="21" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/adria/adriasign/dto/request/ClientDTO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -998,13 +924,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/adria/adriasign/dto/response/SignatureDocumentResponseDTO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/adria/adriasign/dto/response/SignatureDocumentResponseDTO.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/adria/adriasign/service/impl/ReturnURL.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="145">
@@ -1012,20 +932,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/adria/adriasign/service/impl/ReturnBase64.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/adria/adriasign/dto/response/EncodedDocumentResponseDTO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="10" column="41" lean-forward="true" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/adria/adriasign/dto/response/EncodedDocumentResponseDTO.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/adria/adriasign/dto/request/DocumentDTO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -1074,7 +981,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/adria/adriasign/dto/response/error/ApiError.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
+        <state relative-caret-position="289">
           <caret line="29" column="40" selection-start-line="29" selection-start-column="40" selection-end-line="29" selection-end-column="40" />
         </state>
       </provider>
@@ -1090,6 +997,44 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/adria/adriasign/service/impl/DocumentValidationService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1615">
+          <caret line="107" column="29" selection-start-line="107" selection-start-column="29" selection-end-line="107" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/adria/adriasign/service/ReturnTypeStrategy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/adria/adriasign/service/impl/ReturnBase64.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="50" selection-start-line="10" selection-start-column="50" selection-end-line="10" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/adria/adriasign/controller/FileCertificationAPIControllerV3.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="35" column="37" selection-start-line="35" selection-start-column="37" selection-end-line="35" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
