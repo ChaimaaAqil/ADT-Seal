@@ -46,9 +46,6 @@ public class ClientEntity {
     @OneToMany(mappedBy = "clients", targetEntity = KeyStoreEntity.class, fetch = FetchType.LAZY)
     private Collection<KeyStoreEntity> keyStoreEntities;
 
-    public void setCodeClient(String codeClient) {
-        this.codeClient = codeClient;
-    }
 
 
 

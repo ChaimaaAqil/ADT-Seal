@@ -7,5 +7,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.UUID;
 
 public interface DossierPreuveRepository extends JpaRepository<DossierPreuveEntity, UUID> {
-    DossierPreuveEntity findDossierPreuveByTransaction(TransactionEntity transactionEntity);
+    DossierPreuveEntity findDossierPreuveEntityByTransactionEntity(TransactionEntity transactionEntity);
 }

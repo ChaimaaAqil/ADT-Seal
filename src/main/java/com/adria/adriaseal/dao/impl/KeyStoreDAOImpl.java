@@ -33,4 +33,9 @@ public class KeyStoreDAOImpl implements IKeyStoreDAO {
         return keyStoreRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException(String.format("Keystore  with the id not %s found", id)));
     }
+
+    @Override
+    public KeyStoreEntity findByCodeCertif(String codeCertif) {
+        return keyStoreRepository.findByCodeCertif(codeCertif);
+    }
 }

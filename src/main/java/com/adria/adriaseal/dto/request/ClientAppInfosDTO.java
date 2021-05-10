@@ -10,7 +10,7 @@ import javax.validation.constraints.NotEmpty;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Builder
+
 public class ClientAppInfosDTO {
     @NotEmpty
     private String codeApp;

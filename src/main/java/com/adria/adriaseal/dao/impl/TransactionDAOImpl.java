@@ -11,6 +11,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
+import java.util.Date;
 import java.util.UUID;
 @Service
 @Transactional
@@ -26,6 +27,7 @@ public class TransactionDAOImpl implements ITransactionDAO {
                 .statut(StatutTransactionEnum.RECEIVED)
                 .sourceIpAddress(EnvUtil.getClientIpAddressIfItExists())
                 .userAgent(EnvUtil.getUserAgentIfItExists())
+                .dateCreation(new Date())
                 .build();
         transactionEntity = transactionRepository.save(transactionEntity);
         historiqueStatutDAO.save(transactionEntity);

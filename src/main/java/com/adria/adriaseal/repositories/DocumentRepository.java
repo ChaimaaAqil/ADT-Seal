@@ -10,7 +10,7 @@ import java.util.Optional;
 import java.util.UUID;
 
 public interface DocumentRepository extends JpaRepository<DocumentEntity, UUID> {
-    List<DocumentEntity> findDocumentsByTransaction(TransactionEntity transactionEntity);
-    List<DocumentEntity> findDocumentsByStatusAndTransaction(StatutDocumentEnum statutDocument, TransactionEntity transactionEntity);
-    Optional<DocumentEntity> findDocumentByTransactionAndId(TransactionEntity transactionEntity, UUID documentID);
+    List<DocumentEntity> findDocumentEntitiesByStatusAndTransactionEntity(StatutDocumentEnum statutDocument,TransactionEntity transactionEntity);
+    Optional<DocumentEntity> findDocumentEntityByTransactionEntityAndId(TransactionEntity transactionEntity,UUID documentID);
+    List<DocumentEntity> findDocumentEntitiesByTransactionEntity(TransactionEntity transactionEntity);
 }

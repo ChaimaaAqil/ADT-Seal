@@ -28,51 +28,5 @@ public class DocumentSignatureParametersDTO {
     @Positive
     private Integer pageSeal;
 
-    public Boolean getVisible() {
-        return visible;
-    }
 
-    public void setVisible(Boolean visible) {
-        this.visible = visible;
-    }
-
-    public Float getOriginX() {
-        return originX;
-    }
-
-    public void setOriginX(Float originX) {
-        this.originX = originX;
-    }
-
-    public Float getOriginY() {
-        return originY;
-    }
-
-    public void setOriginY(Float originY) {
-        this.originY = originY;
-    }
-
-    public Float getHeight() {
-        return height;
-    }
-
-    public void setHeight(Float height) {
-        this.height = height;
-    }
-
-    public Float getWidth() {
-        return width;
-    }
-
-    public void setWidth(Float width) {
-        this.width = width;
-    }
-
-    public Integer getPageSeal() {
-        return pageSeal;
-    }
-
-    public void setPageSeal(Integer pageSeal) {
-        this.pageSeal = pageSeal;
-    }
 }

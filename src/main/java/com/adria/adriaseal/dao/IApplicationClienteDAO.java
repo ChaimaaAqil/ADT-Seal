@@ -7,4 +7,5 @@ import java.util.UUID;
 public interface IApplicationClienteDAO {
     ApplicationClienteEntity save(ApplicationClienteEntity applicationCliente);
     ApplicationClienteEntity findById(UUID id);
+    ApplicationClienteEntity findByCodeApp(String codeApp);
 }

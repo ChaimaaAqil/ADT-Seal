@@ -8,5 +8,5 @@ import java.util.List;
 import java.util.UUID;
 
 public interface FichierPreuveRepository extends JpaRepository<FichierPreuveEntity, UUID> {
-    List<FichierPreuveEntity> findFichierPreuvesByDossierPreuve(DossierPreuveEntity dossierPreuveEntity);
+    List<FichierPreuveEntity> findFichierPreuveEntitiesByDossierPreuveEntity(DossierPreuveEntity dossierPreuveEntity);
 }

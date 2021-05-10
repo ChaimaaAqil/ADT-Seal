@@ -18,19 +18,16 @@ import javax.validation.Valid;
 @RestController
 @RequestMapping("${app.api.endpoint.v1}/documents/certification")
 @Validated
-
+@RequiredArgsConstructor
 public class FileCertificationAPIControllerV1 {
-   /* final ICertificationServiceV1 certificationService;
+   final ICertificationServiceV1 certificationService;
     final DocumentValidationService documentValidationService;
     // certifDocumentsAsURL
     // certifDocumentsAsBase64
     // certifDocumentsAsZIP
 
 
-    public FileCertificationAPIControllerV1(ICertificationServiceV1 certificationService, DocumentValidationService documentValidationService) {
-        this.certificationService = certificationService;
-        this.documentValidationService = documentValidationService;
-    }
+
 
     @PostMapping(value = "/url", consumes = MediaType.MULTIPART_FORM_DATA_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Object> certifDocumentsAsURL(@Valid @ModelAttribute DocumentDTO documentDTO,
@@ -71,5 +68,5 @@ public class FileCertificationAPIControllerV1 {
                 .body(certificationService.certifMultipleDocuments(documentDTO, documentSignatureParameters, client, ReturnTypeStrategyName.ZIP_STRATEGY));
     }
 
-*/
+
 }

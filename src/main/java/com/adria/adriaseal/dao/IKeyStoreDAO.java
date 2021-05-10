@@ -11,5 +11,6 @@ public interface IKeyStoreDAO {
     KeyStoreEntity setKeyStoreCodeCertif(KeyStoreEntity keyStoreEntity, String password);
     void deleteKeyStore(KeyStoreEntity keyStoreEntity);
     KeyStoreEntity findById(UUID id);
+    KeyStoreEntity findByCodeCertif(String codeCertif);
 
 }

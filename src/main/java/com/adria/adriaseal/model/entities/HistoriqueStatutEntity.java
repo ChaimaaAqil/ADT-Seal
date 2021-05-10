@@ -38,27 +38,5 @@ public class HistoriqueStatutEntity {
     @ManyToOne(targetEntity = TransactionEntity.class)
     private TransactionEntity transactionEntity;
 
-    public UUID getId() {
-        return id;
-    }
 
-    public StatutTransactionEnum getStatus() {
-        return status;
-    }
-
-    public Date getDateCreation() {
-        return dateCreation;
-    }
-
-    public Date getDateUpdate() {
-        return dateUpdate;
-    }
-
-    public Duration getDuration() {
-        return duration;
-    }
-
-    public TransactionEntity getTransactionEntity() {
-        return transactionEntity;
-    }
 }

@@ -9,7 +9,8 @@ import java.util.Optional;
 import java.util.UUID;
 
 public interface HistoriqueStatutRepository extends JpaRepository<HistoriqueStatutEntity, UUID> {
-    List<HistoriqueStatutEntity> findHistoriqueStatutsByTransaction(TransactionEntity transactionEntity);
-    boolean existsByTransaction(TransactionEntity transactionEntity);
-    Optional<HistoriqueStatutEntity> findFirstByTransactionOrderByDateCreationDesc(TransactionEntity transactionEntity);
+    List<HistoriqueStatutEntity> findHistoriqueStatutEntitiesByTransactionEntity(TransactionEntity transactionEntity);
+    boolean existsByTransactionEntity(TransactionEntity transactionEntity);
+    Optional<HistoriqueStatutEntity> findFirstByTransactionEntityOrderByDateCreationDesc(TransactionEntity transactionEntity);
+
 }

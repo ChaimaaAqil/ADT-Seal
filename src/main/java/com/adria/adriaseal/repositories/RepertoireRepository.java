@@ -8,7 +8,7 @@ import java.util.Optional;
 import java.util.UUID;
 
 public interface RepertoireRepository extends JpaRepository<RepertoireEntity, UUID> {
-    Optional<RepertoireEntity> findRepertoireByContentType(TypeContenuRepertoireEnum typeContenu);
 
+    Optional<RepertoireEntity> findRepertoireEntityByContentType(TypeContenuRepertoireEnum typeContenu);
     boolean existsByContentType(TypeContenuRepertoireEnum typeContenu);
 }

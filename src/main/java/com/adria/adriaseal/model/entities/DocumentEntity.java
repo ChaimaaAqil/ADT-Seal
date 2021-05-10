@@ -3,6 +3,7 @@ package com.adria.adriaseal.model.entities;
 import com.adria.adriaseal.model.enums.StatutDocumentEnum;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
 import org.springframework.data.annotation.CreatedDate;
@@ -16,6 +17,8 @@ import java.util.UUID;
 @Data
 @NoArgsConstructor @AllArgsConstructor
 @SuperBuilder(toBuilder = true)
+
+
 public class DocumentEntity {
     // TODO Check Constraints
     @Id

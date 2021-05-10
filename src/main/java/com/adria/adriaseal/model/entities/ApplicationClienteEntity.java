@@ -21,7 +21,7 @@ import java.util.UUID;
 @NoArgsConstructor
 @AllArgsConstructor
 @SuperBuilder(toBuilder = true)
-
+@ToString
 public class ApplicationClienteEntity {
     @Id
     @GeneratedValue
@@ -60,8 +60,6 @@ public class ApplicationClienteEntity {
     private Collection<TransactionEntity> transactionEntities;
 
 
-    public void setCodeApp(String codeApp) {
-        this.codeApp = codeApp;
-    }
+
 
 }

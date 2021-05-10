@@ -5,6 +5,6 @@ public enum TypeContenuRepertoireEnum {
     DOCUMENT_SIGNE,
     DOSSIER_PREUVE,
     FICHIER_PREUVE,
-    IMAGE_SIGNATURE,
+    IMAGE_CERTIF,
     KEYSTORE
 }

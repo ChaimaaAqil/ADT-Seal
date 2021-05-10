@@ -34,4 +34,9 @@ public class ClientDAOImpl implements IClientDAO {
         return clientRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException(String.format("Client  with the id not %s found", id)));
     }
+
+    @Override
+    public ClientEntity findByCodeClient(String codeClient) {
+        return clientRepository.findByCodeClient(codeClient);
+    }
 }

@@ -1,6 +1,6 @@
 package com.adria.adriaseal.dto.response.error;
-
 import com.fasterxml.jackson.annotation.JsonFormat;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import org.springframework.http.HttpStatus;
 import org.springframework.validation.FieldError;
@@ -12,9 +12,9 @@ import java.util.List;
 import java.util.Objects;
 
 @Data
+@AllArgsConstructor
 //@JsonInclude(JsonInclude.Include.NON_NULL)
 public class ApiError {
-
     private HttpStatus status;
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy hh:mm:ss")
     private LocalDateTime timestamp;
@@ -28,27 +28,27 @@ public class ApiError {
 
     public ApiError(HttpStatus status) {
         this();
+        this.message = "Error";
         this.status = status;
     }
 
     public ApiError(HttpStatus status, Throwable ex) {
         this();
         this.status = status;
-        this.message = "Error";
         this.debugMessage = ex.getLocalizedMessage();
     }
 
     public ApiError(HttpStatus status, String message, Throwable ex) {
         this();
         this.status = status;
-        this.message = message == null ? "Error" : message;
+        this.message = message != null ? message : this.message;
         this.debugMessage = ex.getLocalizedMessage();
     }
 
     public ApiError(HttpStatus status, String message, String debugMessage) {
         this();
         this.status = status;
-        this.message = message == null ? "Error" : message;
+        this.message = message != null ? message : this.message;
         this.debugMessage = debugMessage;
     }
 

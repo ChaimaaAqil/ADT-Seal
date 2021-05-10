@@ -8,5 +8,6 @@ import java.util.UUID;
 public interface IClientDAO {
     ClientEntity save(ClientEntity clientEntity, ApplicationClienteEntity clientApp);
     ClientEntity findById(UUID id);
+    ClientEntity findByCodeClient(String codeClient);
 
 }

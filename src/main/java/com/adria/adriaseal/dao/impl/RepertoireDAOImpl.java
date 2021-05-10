@@ -20,7 +20,7 @@ public class RepertoireDAOImpl implements IRepertoireDAO {
 
     @Override
     public RepertoireEntity findRepertoireByContentType(TypeContenuRepertoireEnum typeContenuRepertoire) {
-        return repertoireRepository.findRepertoireByContentType(typeContenuRepertoire)
+        return repertoireRepository.findRepertoireEntityByContentType(typeContenuRepertoire)
                 .orElseThrow( ()-> new ResourceNotFoundException(String.format("RepertoireEntity with Content type %s not found !", typeContenuRepertoire.name())));
     }
 

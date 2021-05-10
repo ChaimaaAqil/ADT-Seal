@@ -23,8 +23,8 @@ public class HistoriqueStatuDAOImpl implements IHistoriqueStatutDAO {
 
     @Override
     public void save(TransactionEntity transactionEntity) {
-        if(historiqueStatutRepository.existsByTransaction(transactionEntity)) {
-            HistoriqueStatutEntity lastStatusHistory = historiqueStatutRepository.findFirstByTransactionOrderByDateCreationDesc(transactionEntity)
+        if(historiqueStatutRepository.existsByTransactionEntity(transactionEntity)) {
+            HistoriqueStatutEntity lastStatusHistory = historiqueStatutRepository.findFirstByTransactionEntityOrderByDateCreationDesc(transactionEntity)
                     .orElseThrow(()-> new ResourceNotFoundException(String.format("No Status History recorded for transaction with id : %s", transactionEntity.getId())));
 
             if (transactionEntity.getStatut().equals(lastStatusHistory.getStatus())) return;
@@ -34,6 +34,7 @@ public class HistoriqueStatuDAOImpl implements IHistoriqueStatutDAO {
         historiqueStatutRepository.save(HistoriqueStatutEntity
                 .builder()
                 .transactionEntity(transactionEntity)
+                .dateCreation(new Date())
                 .status(transactionEntity.getStatut())
                 .build());
     }

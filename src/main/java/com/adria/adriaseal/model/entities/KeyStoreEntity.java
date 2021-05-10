@@ -48,7 +48,4 @@ public class KeyStoreEntity {
     private Collection<TransactionEntity> transactionEntities;
 
 
-    public void setCodeCertif(String codeCertif) {
-        this.codeCertif = codeCertif;
-    }
 }

@@ -13,19 +13,12 @@ import java.util.List;
 import java.util.UUID;
 
 public interface IDocumentDAO {
-    DocumentEntity getDocumentByTransactionAndId(TransactionEntity transactionEntity, UUID documentID);
 
-    DocumentEntity saveNonSignedDocument(TransactionEntity transactionEntity, MultipartFile multipartFile, DocumentSignatureParametersDTO params,
-                                         RepertoireEntity documentRepo, Date uploadDate);
 
-    List<DocumentEntity> saveNonSignedDocuments(TransactionEntity transactionEntity, MultipartFile[] documents,
+    List<DocumentEntity> saveAllDocumentsOrign(TransactionEntity transactionEntity, MultipartFile[] documents,
                                                 DocumentSignatureParametersDTO[] documentSignatureParameters, RepertoireEntity documentRepo, Date uploadDate);
 
-    DocumentEntity savePendingDocument(DocumentEntity documentEntity);
-
-    void saveSignedDocument(DocumentEntity documentEntity, InMemoryDocument signedDSSDocument, RepertoireEntity documentRepo);
-
-    List<DocumentEntity> getDocumentsByTransaction(TransactionEntity transactionEntity);
-
-    List<DocumentEntity> getDocumentsByStatusAndTransaction(StatutDocumentEnum statutDocument, TransactionEntity transactionEntity);
+    void saveSignedDocument(DocumentEntity document, InMemoryDocument signedDSSDocument, RepertoireEntity documentRepo);
+    DocumentEntity saveNonSignedDocument(TransactionEntity transaction, MultipartFile multipartFile, DocumentSignatureParametersDTO params,
+                                   RepertoireEntity documentRepo, Date uploadDate);
 }

@@ -10,7 +10,7 @@ import java.util.UUID;
 
 
 @Entity
-@Table(name = "fichiers_preuve")
+//@Table(name = "fichiers_preuve")
 @Data
 @AllArgsConstructor @NoArgsConstructor
 @SuperBuilder(toBuilder = true)

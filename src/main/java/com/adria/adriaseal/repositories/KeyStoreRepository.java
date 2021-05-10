@@ -6,5 +6,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.UUID;
 
 public interface KeyStoreRepository extends JpaRepository<KeyStoreEntity, UUID> {
+    KeyStoreEntity findByCodeCertif(String codeCertif);
 }
 

@@ -30,5 +30,11 @@ public class ApplicationClienteDAOImpl implements IApplicationClienteDAO {
         return applicationClienteRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException(String.format("Client app with the id not %s found", id)));
     }
+
+    @Override
+    public ApplicationClienteEntity findByCodeApp(String codeApp) {
+        return applicationClienteRepository.findByCodeApp(codeApp);
+
+    }
 }
 

@@ -29,7 +29,4 @@ public class DocumentDTO {
     @IsAnImage
     private MultipartFile[] signatureImage;
 
-    public MultipartFile[] getDocuments() {
-        return documents;
-    }
 }
